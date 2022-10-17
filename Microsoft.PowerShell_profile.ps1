@@ -100,5 +100,5 @@ if (Test-Path($ChocolateyProfile)) {
     Import-Module "$ChocolateyProfile"
 }
 
-oh-my-posh init pwsh --config "~/.mytheme.omp.json" | Invoke-Expression
+oh-my-posh init pwsh --config "https://raw.githubusercontent.com/Anti049/NewComputerSetup/main/.mytheme.omp.json" | Invoke-Expression
 $env:POSH_GIT_ENABLED = $true
