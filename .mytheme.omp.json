@@ -1,0 +1,71 @@
+{
+	"$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+	"console_title_template": "{{.PWD}}",
+	"blocks": [
+		{
+			"alignment": "left",
+			"segments": [
+				{
+					"background": "#ffb86c",
+					"foreground": "#282a36",
+					"leading_diamond": "\ue0b6",
+					"powerline_symbol": "\ue0b0",
+					"properties": {
+						"style": "agnoster"
+					},
+					"style": "diamond",
+					"template": " \ue5ff {{ .Path }} ",
+					"trailing_diamond": "\ue0b0",
+					"type": "path"
+				},
+				{
+					"type": "time",
+					"background": "#6272a4",
+					"foreground": "#f8f8f2",
+					"leading_diamond": "<transparent,background>\ue0b0</>",
+					"trailing_diamond": "\ue0b0",
+					"style": "diamond",
+					"properties": {
+						"time_format": "5:04 PM"
+					}
+				},
+				{
+					"type": "flutter",
+					"style": "powerline",
+					"powerline_symbol": "\uE0B0",
+					"foreground": "#282a36",
+					"background": "#8be9fd",
+					"template": " \ue28e {{ .Full }} ",
+					"leading_diamond": "<transparent,background>\ue0b0</>"
+				},
+				{
+					"type": "project",
+					"style": "powerline",
+					"powerline_symbol": "\uE0B0",
+					"trailing_diamond": "\ue0b0",
+					"foreground": "#282a36",
+					"background": "#f1fa8c",
+					"template": " {{ if .Error }}{{ .Error }}{{ else }}{{ if .Version }}\uf487 {{.Version}}{{ end }}{{ end }} "
+				},
+				{
+					"background": "#50fa7b",
+					"background_templates": [
+						"{{ if gt .Code 0 }}#ff5555{{ end }}"
+					],
+					"foreground": "#282a36",
+					"leading_diamond": "<transparent,background>\ue0b0</>",
+					"properties": {
+						"always_enabled": true
+					},
+					"style": "diamond",
+					"template": " \uf0e7 ",
+					"trailing_diamond": "\ue0b0",
+					"type": "exit"
+				}
+			],
+			"type": "prompt"
+		}
+	],
+	"final_space": true,
+	"version": 2
+}
